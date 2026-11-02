@@ -35,5 +35,6 @@
   ```
 
 - Keep `vendor` excluded in `_config.yml`; otherwise Jekyll may try to render installed gem files as site content. `.bundle/`, `vendor/bundle/`, `_site/`, and `.jekyll-cache/` are local/generated files and should stay out of Git.
-- Verify site changes with `bundle exec jekyll build`. GitHub Pages builds this site from the default branch and `/ (root)`; no separate deployment workflow is required.
+- Verify site changes with `bundle exec jekyll build`.
+- `.github/workflows/pages.yml` builds the site with the Jekyll dependency locked in `Gemfile.lock` and deploys it from the `main` branch. In GitHub repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 - For a project URL such as `https://OWNER.github.io/REPO/`, set `baseurl: "/REPO"` in `_config.yml`. Keep it empty for a root domain or custom domain.

@@ -15,3 +15,7 @@ bundle exec jekyll serve
 Open the local address printed by Jekyll. Changes will rebuild as you edit files.
 
 For editing instructions, see [CONTRIBUTING.md](CONTRIBUTING.md). Copy [templates/guide.md](templates/guide.md) to start a guide.
+
+## Publishing
+
+The site builds and deploys from the `main` branch with GitHub Actions. In the repository settings, open **Pages → Build and deployment** and set **Source** to **GitHub Actions**. The workflow builds with the dependencies in `Gemfile.lock` and publishes the generated site; the custom domain remains configured separately under **Pages**.
