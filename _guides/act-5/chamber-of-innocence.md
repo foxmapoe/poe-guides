@@ -21,4 +21,11 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 5 Chamber of Innocence layout map 1]({{ '/assets/guides/act-5/chamber-of-innocence/The_Chamber_of_Innocence_1_5_5_v1_o0.webp' | relative_url }})
+
+![Act 5 Chamber of Innocence layout map 2]({{ '/assets/guides/act-5/chamber-of-innocence/The_Chamber_of_Innocence_1_5_5_v2_o0.webp' | relative_url }})
+
+![Act 5 Chamber of Innocence layout map 3]({{ '/assets/guides/act-5/chamber-of-innocence/The_Chamber_of_Innocence_1_5_5_v3_o0.webp' | relative_url }})
+
+![Act 5 Chamber of Innocence layout map 4]({{ '/assets/guides/act-5/chamber-of-innocence/The_Chamber_of_Innocence_1_5_5_v4_o0.webp' | relative_url }})

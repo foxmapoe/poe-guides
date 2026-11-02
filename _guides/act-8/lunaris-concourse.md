@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 8 Lunaris Concourse layout map 1]({{ '/assets/guides/act-8/lunaris-concourse/The_Lunaris_Concourse_barracks_1_o0.webp' | relative_url }})

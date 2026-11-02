@@ -21,4 +21,7 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 4 Ascent layout map 1]({{ '/assets/guides/act-4/ascent/The_Ascent_ascent1_o0.webp' | relative_url }})
+
+![Act 4 Ascent layout map 2]({{ '/assets/guides/act-4/ascent/The_Ascent_ascent2_o0.webp' | relative_url }})

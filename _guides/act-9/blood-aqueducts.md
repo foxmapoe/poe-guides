@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 9 Blood Aqueducts layout map 1]({{ '/assets/guides/act-9/blood-aqueducts/The_Blood_Aqueduct_intro_1_1_o0.webp' | relative_url }})

@@ -21,4 +21,7 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 5 Oriath Square layout map 1]({{ '/assets/guides/act-5/oriath-square/Oriath_Square_1_5_3_v1_o0.webp' | relative_url }})
+
+![Act 5 Oriath Square layout map 2]({{ '/assets/guides/act-5/oriath-square/Oriath_Square_hideout_courts_claim_o0.webp' | relative_url }})

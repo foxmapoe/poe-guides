@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 2 Crossroads layout map 1]({{ '/assets/guides/act-2/crossroads/The_Crossroads_macro_crossroads_o0.webp' | relative_url }})

@@ -21,4 +21,11 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 6 Twilight Strand layout map 1]({{ '/assets/guides/act-6/twilight-strand/The_Twilight_Strand_twilight_strand_01_o0.webp' | relative_url }})
+
+![Act 6 Twilight Strand layout map 2]({{ '/assets/guides/act-6/twilight-strand/The_Twilight_Strand_twilight_strand_02_o0.webp' | relative_url }})
+
+![Act 6 Twilight Strand layout map 3]({{ '/assets/guides/act-6/twilight-strand/The_Twilight_Strand_twilight_strand_03_o0.webp' | relative_url }})
+
+![Act 6 Twilight Strand layout map 4]({{ '/assets/guides/act-6/twilight-strand/The_Twilight_Strand_twilight_strand_04_o0.webp' | relative_url }})

@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 3 Ebony Barracks layout map 1]({{ '/assets/guides/act-3/ebony-barracks/The_Ebony_Barracks_barracks_1_o0.webp' | relative_url }})

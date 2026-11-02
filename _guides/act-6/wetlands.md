@@ -21,4 +21,19 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 6 Wetlands layout map 1]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_01_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 2]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_02_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 3]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_03_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 4]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_04_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 5]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_05_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 6]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_06_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 7]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_07_o0.webp' | relative_url }})
+
+![Act 6 Wetlands layout map 8]({{ '/assets/guides/act-6/wetlands/The_Wetlands_wetlands_08_o0.webp' | relative_url }})

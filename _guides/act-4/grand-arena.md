@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 4 Grand Arena layout map 1]({{ '/assets/guides/act-4/grand-arena/The_Grand_Arena_daresso2_o0.webp' | relative_url }})
+
+![Act 4 Grand Arena layout map 2]({{ '/assets/guides/act-4/grand-arena/The_Grand_Arena_daresso3_o0.webp' | relative_url }})
+
+![Act 4 Grand Arena layout map 3]({{ '/assets/guides/act-4/grand-arena/The_Grand_Arena_daresso_o0.webp' | relative_url }})

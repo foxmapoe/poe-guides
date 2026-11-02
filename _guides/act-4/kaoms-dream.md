@@ -21,4 +21,11 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 4 Kaom's Dream layout map 1]({{ '/assets/guides/act-4/kaoms-dream/Kaoms_Dream_Kaom1_1_o0.webp' | relative_url }})
+
+![Act 4 Kaom's Dream layout map 2]({{ '/assets/guides/act-4/kaoms-dream/Kaoms_Dream_Kaom1_2_o0.webp' | relative_url }})
+
+![Act 4 Kaom's Dream layout map 3]({{ '/assets/guides/act-4/kaoms-dream/Kaoms_Dream_Kaom1_3_o0.webp' | relative_url }})
+
+![Act 4 Kaom's Dream layout map 4]({{ '/assets/guides/act-4/kaoms-dream/Kaoms_Dream_Kaom1_4_o0.webp' | relative_url }})

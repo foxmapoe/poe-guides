@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 6 Southern Forest layout map 1]({{ '/assets/guides/act-6/southern-forest/The_Southern_Forest_southern_forest_01_o0.webp' | relative_url }})
+
+![Act 6 Southern Forest layout map 2]({{ '/assets/guides/act-6/southern-forest/The_Southern_Forest_southern_forest_02_o0.webp' | relative_url }})
+
+![Act 6 Southern Forest layout map 3]({{ '/assets/guides/act-6/southern-forest/The_Southern_Forest_southern_forest_03_o0.webp' | relative_url }})

@@ -21,4 +21,11 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 2 Crypt layout map 1]({{ '/assets/guides/act-2/crypt/The_Crypt_Level_1_church_dungeon1_o0.webp' | relative_url }})
+
+![Act 2 Crypt layout map 2]({{ '/assets/guides/act-2/crypt/The_Crypt_Level_1_church_dungeon2_o0.webp' | relative_url }})
+
+![Act 2 Crypt layout map 3]({{ '/assets/guides/act-2/crypt/The_Crypt_Level_1_church_dungeon3_o0.webp' | relative_url }})
+
+![Act 2 Crypt layout map 4]({{ '/assets/guides/act-2/crypt/The_Crypt_Level_1_church_dungeon4_o0.webp' | relative_url }})

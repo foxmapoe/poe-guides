@@ -21,4 +21,13 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 7 Ashen Fields layout map 1]({{ '/assets/guides/act-7/ashen-fields/The_Ashen_Fields_ashen_fields_01_o0.webp' | relative_url }})
+
+![Act 7 Ashen Fields layout map 2]({{ '/assets/guides/act-7/ashen-fields/The_Ashen_Fields_ashen_fields_02_o0.webp' | relative_url }})
+
+![Act 7 Ashen Fields layout map 3]({{ '/assets/guides/act-7/ashen-fields/The_Ashen_Fields_ashen_fields_03_o0.webp' | relative_url }})
+
+![Act 7 Ashen Fields layout map 4]({{ '/assets/guides/act-7/ashen-fields/The_Ashen_Fields_ashen_fields_04_o0.webp' | relative_url }})
+
+![Act 7 Ashen Fields layout map 5]({{ '/assets/guides/act-7/ashen-fields/The_Ashen_Fields_ashen_fields_05_o0.webp' | relative_url }})

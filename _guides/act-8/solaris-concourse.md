@@ -21,4 +21,15 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 8 Solaris Concourse layout map 1]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_1a_o0.webp' | relative_url }})
+
+![Act 8 Solaris Concourse layout map 2]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_1b_o0.webp' | relative_url }})
+
+![Act 8 Solaris Concourse layout map 3]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_1c_o0.webp' | relative_url }})
+
+![Act 8 Solaris Concourse layout map 4]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_2a_o0.webp' | relative_url }})
+
+![Act 8 Solaris Concourse layout map 5]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_2b_o0.webp' | relative_url }})
+
+![Act 8 Solaris Concourse layout map 6]({{ '/assets/guides/act-8/solaris-concourse/The_Solaris_Concourse_battlefront_2c_o0.webp' | relative_url }})

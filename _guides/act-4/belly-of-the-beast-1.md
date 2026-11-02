@@ -21,4 +21,15 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 4 Belly of the Beast 1 layout map 1]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly2_o0.webp' | relative_url }})
+
+![Act 4 Belly of the Beast 1 layout map 2]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly3_o0.webp' | relative_url }})
+
+![Act 4 Belly of the Beast 1 layout map 3]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly4_o0.webp' | relative_url }})
+
+![Act 4 Belly of the Beast 1 layout map 4]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly5_o0.webp' | relative_url }})
+
+![Act 4 Belly of the Beast 1 layout map 5]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly6_o0.webp' | relative_url }})
+
+![Act 4 Belly of the Beast 1 layout map 6]({{ '/assets/guides/act-4/belly-of-the-beast-1/The_Belly_of_the_Beast_Level_1_belly_o0.webp' | relative_url }})

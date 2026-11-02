@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 3 Archives layout map 1]({{ '/assets/guides/act-3/archives/The_Archives_city_archives_1_o0.webp' | relative_url }})

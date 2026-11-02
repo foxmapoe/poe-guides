@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 3 City of Sarn layout map 1]({{ '/assets/guides/act-3/city-of-sarn/The_City_of_Sarn_intro_1_1_o0.webp' | relative_url }})

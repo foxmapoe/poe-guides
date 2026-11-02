@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 2 Southern Forest layout map 1]({{ '/assets/guides/act-2/southern-forest/The_Southern_Forest_macro_forest_intro2_waypoint_o0.webp' | relative_url }})
+
+![Act 2 Southern Forest layout map 2]({{ '/assets/guides/act-2/southern-forest/The_Southern_Forest_macro_forest_intro3_waypoint_o0.webp' | relative_url }})
+
+![Act 2 Southern Forest layout map 3]({{ '/assets/guides/act-2/southern-forest/The_Southern_Forest_macro_forest_intro_waypoint_o0.webp' | relative_url }})

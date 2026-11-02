@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 9 Quarry layout map 1]({{ '/assets/guides/act-9/quarry/The_Quarry_quarry_1_o0.webp' | relative_url }})
+
+![Act 9 Quarry layout map 2]({{ '/assets/guides/act-9/quarry/The_Quarry_quarry_2_o0.webp' | relative_url }})
+
+![Act 9 Quarry layout map 3]({{ '/assets/guides/act-9/quarry/The_Quarry_quarry_3_o0.webp' | relative_url }})

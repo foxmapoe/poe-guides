@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 10 Cathedral Rooftop layout map 1]({{ '/assets/guides/act-10/cathedral-rooftop/The_Cathedral_Rooftop_cathedral_roof_1_o0.webp' | relative_url }})

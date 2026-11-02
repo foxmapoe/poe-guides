@@ -21,4 +21,5 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 10 Ravaged Square layout map 1]({{ '/assets/guides/act-10/ravaged-square/The_Ravaged_Square_ravaged_square_1_o0.webp' | relative_url }})

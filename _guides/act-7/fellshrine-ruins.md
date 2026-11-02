@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 7 Fellshrine Ruins layout map 1]({{ '/assets/guides/act-7/fellshrine-ruins/The_Fellshrine_Ruins_fellshrine_graveyard_01_o0.webp' | relative_url }})
+
+![Act 7 Fellshrine Ruins layout map 2]({{ '/assets/guides/act-7/fellshrine-ruins/The_Fellshrine_Ruins_fellshrine_graveyard_02_o0.webp' | relative_url }})
+
+![Act 7 Fellshrine Ruins layout map 3]({{ '/assets/guides/act-7/fellshrine-ruins/The_Fellshrine_Ruins_fellshrine_graveyard_03_o0.webp' | relative_url }})

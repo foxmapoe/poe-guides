@@ -21,4 +21,9 @@ game_version: ""
 
 ## Map
 
-<!-- Add a route image here with descriptive alt text. -->
+
+![Act 4 Harvest layout map 1]({{ '/assets/guides/act-4/harvest/The_Harvest_harvest1_o0.webp' | relative_url }})
+
+![Act 4 Harvest layout map 2]({{ '/assets/guides/act-4/harvest/The_Harvest_harvest2_o0.webp' | relative_url }})
+
+![Act 4 Harvest layout map 3]({{ '/assets/guides/act-4/harvest/The_Harvest_harvest3_o0.webp' | relative_url }})
