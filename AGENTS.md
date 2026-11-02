@@ -13,7 +13,7 @@
 - Set `title` to the displayed zone name, `act` to a quoted act number such as `"1"`, `order` to a numeric position within the act, and `game_version` to the version the route was checked against. `updated` is optional and should use `YYYY-MM-DD`.
 - The `order` field controls both the homepage list and sidebar order. Keep values unique and in campaign route order. Act 1 currently follows the sequence represented by its guide pages.
 - Use Markdown headings for route, landmarks, useful details, and maps. Keep directions specific and distinguish verified information from draft notes; do not invent route details.
-- Store images under `assets/guides/<area-slug>/`, link them with `relative_url`, and provide useful alt text. Keep images focused and reasonably small.
+- Store images under `assets/guides/act-<number>/<area-slug>/`, matching the guide path. Link them with `relative_url`, provide useful alt text, and keep images focused and reasonably small.
 - Update `CONTRIBUTING.md` if guide metadata or contribution steps change.
 
 ## Navigation and accessibility

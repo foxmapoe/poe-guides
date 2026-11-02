@@ -27,8 +27,8 @@ Describe the route in a few clear steps. Use landmarks, exits, and relative dire
 
 ## Map
 
-Add image files under `assets/guides/<area-slug>/` and link them with a site-relative path:
+Store images under `assets/guides/act-<number>/<area-slug>/`, matching this guide's act and filename. For example, for the Act 1 Coast guide:
 
-![Route map for this area]({{ '/assets/guides/area-slug/route-map.png' | relative_url }})
+![Describe the route information shown in this image.]({{ '/assets/guides/act-1/coast/route-map.webp' | relative_url }})
 
-Add alt text that describes the useful route information in the image. Keep images cropped and reasonably small.
+Use `relative_url` for image links and alt text that describes the useful route information. Keep images cropped, readable on mobile, and reasonably small.

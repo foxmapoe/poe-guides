@@ -24,7 +24,15 @@ Guides are Markdown files, so you can propose edits directly in GitHub without i
 
 ## Add images
 
-Upload images under `assets/guides/<area-slug>/` using **Add file → Upload files** in GitHub. Link them from the guide using a site-relative path, and include descriptive alt text. Keep images focused on the information needed to follow the route and compress large files before uploading.
+Store images in a folder matching each guide's act and area slug. For example, images for `_guides/act-1/coast.md` go in `assets/guides/act-1/coast/`. Use clear, consistent filenames such as `route-map.webp` and `landmarks.webp`.
+
+Open the matching folder in GitHub and choose **Add file → Upload files**. Link each image from the relevant section of the guide using `relative_url`, and write alt text that describes the route information shown:
+
+```markdown
+![Coast route from the Twilight Strand entrance to the Mud Flats exit, with the waypoint marked.]({{ '/assets/guides/act-1/coast/route-map.webp' | relative_url }})
+```
+
+Keep images focused on the information needed to follow the route, readable on mobile, and reasonably compressed before uploading.
 
 You can also open an issue and attach an image there if you need help adding it to the repository.
 
