@@ -1,0 +1,25 @@
+title: Path of Exile Campaign Routes
+description: Community-written route and layout guides for the Path of Exile campaign.
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+
+collections:
+  guides:
+    output: true
+    permalink: /guides/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: guide
+
+exclude:
+  - vendor
+  - templates
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <script>
+      try {
+        if (localStorage.getItem("poe-guides-theme") === "light") {
+          document.documentElement.dataset.theme = "light";
+        }
+      } catch (_) {}
+    </script>
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <div class="header-controls">
+          <nav aria-label="Main navigation">
+            <a href="{{ '/' | relative_url }}">Guides</a>
+            <a href="{{ '/CONTRIBUTING/' | relative_url }}">Contribute</a>
+            <a href="https://github.com/foxmapoe/poe-guides">GitHub</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button">Light mode</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="wrap page-content">
+      {% if page.url != '/' %}<p class="back-link"><a href="{{ '/' | relative_url }}">← All campaign guides</a></p>{% endif %}
+      <div class="content-grid">
+        <aside class="sidebar">
+          {% include guide-navigation.html %}
+        </aside>
+        <div class="main-content">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">Community maintained · <a href="https://github.com/foxmapoe/poe-guides">Improve a guide on GitHub</a></div>
+    </footer>
+    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  </body>
+</html>

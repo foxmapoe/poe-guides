@@ -1,0 +1,30 @@
+name: Suggest a guide change
+description: Report outdated route details or propose a correction.
+title: "[Guide]: "
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Act and area
+      placeholder: Act 1 — The Coast
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Game version
+      placeholder: "3.x"
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Include landmarks or steps so someone can verify the suggestion.
+    validations:
+      required: true
+  - type: textarea
+    id: image
+    attributes:
+      label: Image or reference (optional)
+      description: You can drag an image into this field.

@@ -1,0 +1,23 @@
+<nav class="campaign-nav" aria-label="Campaign guides">
+  <h2>Acts and zones</h2>
+  {% for act in site.data.acts %}
+    {% assign act_guides = site.guides | where: "act", act.number | sort: "order" %}
+    <details class="act-nav" {% if page.act == act.number %}open{% endif %}>
+      <summary>
+        <span>{{ act.name }}</span>
+        <span class="zone-count">{{ act_guides.size }} zones</span>
+      </summary>
+      {% if act_guides.size > 0 %}
+        <ul>
+          {% for guide in act_guides %}
+            <li>
+              <a href="{{ guide.url | relative_url }}"{% if page.url == guide.url %} aria-current="page"{% endif %}>{{ guide.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="empty-act">No zone guides yet.</p>
+      {% endif %}
+    </details>
+  {% endfor %}
+</nav>
