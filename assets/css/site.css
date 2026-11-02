@@ -91,7 +91,14 @@ li + li { margin-top: 0.3rem; }
 .download-button { display: inline-block; margin-top: 0.75rem; padding: 0.55rem 0.8rem; border-radius: 0.3rem; background: var(--button-bg); color: var(--button-text); font-weight: 650; text-decoration: none; }
 .download-button:hover { background: var(--button-hover); color: var(--button-text); }
 .guide-content { max-width: 48rem; }
-.guide-content img { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; border: 1px solid var(--line); border-radius: 0.35rem; }
+.guide-content img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--line); border-radius: 0.35rem; }
+.guide-image-zoom { display: block; max-width: 100%; margin: 1.5rem auto; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+.guide-image-zoom:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+.image-lightbox { position: fixed; max-width: 96vw; max-height: 96vh; padding: 3rem 0.75rem 0.75rem; overflow: visible; border: 1px solid var(--line); border-radius: 0.4rem; background: var(--paper); color: var(--ink); }
+.image-lightbox::backdrop { background: rgb(0 0 0 / 0.86); }
+.image-lightbox > img { display: block; max-width: 94vw; max-height: calc(92vh - 3.75rem); width: auto; height: auto; margin: 0; border: 0; object-fit: contain; }
+.image-lightbox-close { position: absolute; top: 0.5rem; right: 0.5rem; padding: 0.35rem 0.65rem; border: 1px solid var(--header-text); border-radius: 0.3rem; background: var(--header-bg); color: var(--header-text); font: inherit; cursor: pointer; }
+.image-lightbox-close:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .guide-content blockquote { margin-inline: 0; padding: 0.25rem 1rem; border-left: 4px solid var(--accent); color: var(--muted); }
 .skip-link { position: absolute; left: -9999px; top: 0; }
 .skip-link:focus { left: 1rem; top: 1rem; z-index: 1; padding: 0.5rem 0.75rem; background: var(--panel); }
