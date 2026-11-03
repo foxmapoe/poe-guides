@@ -5,32 +5,23 @@ order: 0
 game_version: ""
 ---
 
-> Draft page. Add tested route details for the current game version.
+{% assign a = '/assets/guides/act-1/twilight-strand/' | relative_url %}
 
-## Route
+<div class="cp" style="--r:16/9"><div class="cp-q">Thumb shape on the left wall?</div><ul><li style="flex:1"><i>Yes</i><div class="cp-stem"></div><div class="cp-leaf"><b>Top Right</b><img src="{{ a }}twilight%20strand.webp" alt="Top Right route"><span>Go north-east</span></div></li><li style="flex:1"><i>Yes</i><div class="cp-stem"></div><div class="cp-leaf"><b>Top</b><img src="{{ a }}twilight%20strand%20Top.webp" alt="Top route"><span>Go north-east, same read as Top Right</span></div></li><li style="flex:1"><i>No</i><div class="cp-stem"></div><div class="cp-leaf"><b>Right</b><img src="{{ a }}twilight%20strand%20Right.webp" alt="Right route"><span>Go full right, next to the water</span></div></li></ul></div>
 
-There are only 3 layouts for this zone and all of them are simple, They are Top , Top Right and Right.
-The naming convention tells you wich direction you are going from the starting location
-
-## Landmarks
-
-Look at leftside wall and if its a thumb shape you go north east if its not you go full right next to water
-
-## Map
+## Layouts
 
 ### Top Right
-![Act 1 Twilight Strand layout map 4]({{ '/assets/guides/act-1/twilight-strand/The_Twilight_Strand_macro_beach4_o0.webp' | relative_url }})
-On this layout when you see the thumb in the red circle means you go North East
-![Act 1 Twilight Strand layout map 4]({{ '/assets/guides/act-1/twilight-strand/twilight strand.webp' | relative_url }})
 
+![Top Right layout]({{ a }}The_Twilight_Strand_macro_beach4_o0.webp)
+![Top Right route]({{ a }}twilight%20strand.webp)
 
 ### Right
-![Act 1 Twilight Strand layout map 5]({{ '/assets/guides/act-1/twilight-strand/The_Twilight_Strand_macro_beach5_o0.webp' | relative_url }})
-On this layout when you don't see the thumb in the red circle means you go East
-![Act 1 Twilight Strand layout map 5]({{ '/assets/guides/act-1/twilight-strand/twilight strand Right.webp' | relative_url }})
+
+![Right layout]({{ a }}The_Twilight_Strand_macro_beach5_o0.webp)
+![Right route]({{ a }}twilight%20strand%20Right.webp)
 
 ### Top
 
-![Act 1 Twilight Strand layout map 6]({{ '/assets/guides/act-1/twilight-strand/The_Twilight_Strand_macro_beach6_o0.webp' | relative_url }})
-This is same read as the Top Right layout you go North East
-![Act 1 Twilight Strand layout map 6]({{ '/assets/guides/act-1/twilight-strand/twilight strand Top.webp' | relative_url }})
+![Top layout]({{ a }}The_Twilight_Strand_macro_beach6_o0.webp)
+![Top route]({{ a }}twilight%20strand%20Top.webp)

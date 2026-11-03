@@ -2,7 +2,7 @@
 title: Submerged Passage
 act: "1"
 order: 4
-game_version: ""
+game_version: "3.29.3.3"
 ---
 
 > Draft page. Add tested route details for the current game version.
@@ -12,14 +12,6 @@ game_version: ""
 Submerged Passage has 6 distinct layouts and each layout can be eaily recognized almost immediately by looking at the orientation of the entrance and how the area opens up.
 The layouts are gonna be split evenly with the designation being 3 waypoint above the entrance and 3 with waypoint below the entrance.
 There are two setups for submerged curently that people do, One is Dweller first witch is the fastest aproach and the portal at bridge witch is slower.
-
-## Landmarks
-
-<!-- Note visual landmarks that help identify the route. -->
-
-## Useful details
-
-<!-- Add waypoint, quest, or timing notes. -->
 
 ## Map
 

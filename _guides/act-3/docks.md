@@ -5,22 +5,9 @@ order: 8
 game_version: ""
 ---
 
-> Draft page. Add tested route details for the current game version.
+> No route yet.
 
-## Route
-
-<!-- Describe the route using landmarks, directions, and the next exit. -->
-
-## Landmarks
-
-<!-- Note visual landmarks that help identify the route. -->
-
-## Useful details
-
-<!-- Add waypoint, quest, or timing notes. -->
-
-## Map
-
+## Layouts
 
 ![Act 3 Docks layout map 1]({{ '/assets/guides/act-3/docks/The_Docks_docks_dungeon_1_o0.webp' | relative_url }})
 
