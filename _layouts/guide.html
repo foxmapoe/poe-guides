@@ -8,9 +8,4 @@ layout: default
     {% if page.updated %}<p class="updated">Last checked: {{ page.updated | date: "%B %-d, %Y" }}</p>{% endif %}
   </header>
   <div class="guide-content">{{ content }}</div>
-  {% assign repository_url = site.github.repository_url | default: "https://github.com/foxmapoe/poe-guides" %}
-  {% assign source_branch = site.github.source.branch | default: "master" %}
-  <footer class="guide-footer">
-    <a class="download-button" href="{{ repository_url }}/raw/refs/heads/{{ source_branch }}/{{ page.path }}?download=1" download="{{ page.path | split: '/' | last }}">Download Markdown (.md)</a>
-  </footer>
 </article>
