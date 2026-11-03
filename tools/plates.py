@@ -1,15 +1,9 @@
-"""Write decision-tree guide pages: run `python tools/plates.py` from the repo root after editing ZONES."""
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 A = '{{ a }}'
 
-# Each zone: layouts (key: name, route image, what to do), plates (entrance label, entrance image or None, tree)
-# and sections (heading, macro image, layout key) for the full-size maps below the trees.
-# Optional 'ratio' sets the route card picture shape (default square).
-# A tree node is (question, [(answer, child)]) where a child is a layout key or another node.
-# Add 'fold' as a third item to move a branch into a second row under its column.
 ZONES = {
     'act-1/twilight-strand': {
         'layouts': {
@@ -102,7 +96,6 @@ class Page:
         return f'<div class="cp-q">{node[0]}</div>{self.kids(node, rows)}'
 
     def row(self, node, n):
-        """Second row under the rightmost column: question there, its layouts in the last len(kids) columns."""
         k = len(node[1])
         return (f'<div class="cp-row" style="grid-template-columns:repeat({n},1fr);--x:{(n - .5) / n:.4%}">'
                 f'<div class="cp-q" style="grid-column:{n}">{node[0]}</div>'

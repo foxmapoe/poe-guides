@@ -112,7 +112,6 @@ li + li { margin-top: 0.3rem; }
   .sidebar { position: static; max-height: 18rem; }
 }
 
-/* Decision-tree plates (tools/plates.py) */
 .guide-content:has(.cp){max-width:none}
 .cp{display:flex;flex-direction:column;align-items:center;margin:0 0 3rem;font-size:.9rem;line-height:1.35}
 .cp-root{width:min(100%,20rem);text-align:center}
