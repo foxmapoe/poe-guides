@@ -22,6 +22,10 @@ Guides are Markdown files, so you can propose edits directly in GitHub without i
 3. Replace the example sections with the route details. Remove sections that do not apply.
 4. Propose the new file in a pull request.
 
+## Add a decision tree
+
+Pages with a ruleset show a decision tree that ends in each layout's route picture. Add the zone's layouts, tree and maps to `ZONES` in `tools/plates.py`, then run `python tools/plates.py` from the repository root. It rewrites the zone's page, keeping the front matter.
+
 ## Add images
 
 Store images in a folder matching each guide's act and area slug. For example, images for `_guides/act-1/coast.md` go in `assets/guides/act-1/coast/`. Use clear, consistent filenames such as `route-map.webp` and `landmarks.webp`.
