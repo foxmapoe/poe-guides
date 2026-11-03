@@ -135,19 +135,17 @@ li + li { margin-top: 0.3rem; }
 .cp-leaf b{padding:.35rem .5rem;text-align:center}
 .cp-leaf span{min-height:5.6em;padding:.4rem .5rem .5rem;text-align:center;color:var(--muted);font-size:.85em}
 .cp li[style="flex:0"]>i{white-space:nowrap}
-.cp-mode{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem}
-.cp-mode>input{position:absolute;opacity:0;pointer-events:none}
-.cp-mode>label{padding:.35rem 1.1rem;border:1px solid var(--line);border-radius:999px;cursor:pointer;color:var(--muted)}
-.cp-mode>input:checked+label{color:var(--accent-dark);border-color:currentColor}
-.cp-mode>input:focus-visible+label{outline:2px solid var(--accent-dark);outline-offset:2px}
-.cp-simple,.cp-advanced{flex-basis:100%;margin-top:1.2rem}
-#mode-simple:checked~.cp-advanced,#mode-advanced:checked~.cp-simple{display:none}
-.cp-simple{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:3rem}
-.cp-simple>b{font-size:1.2rem;color:var(--accent-dark)}
-.cp-simple>i{color:var(--muted);font-style:normal}
-.cp-simple>div{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;width:100%}
-.cp-simple .cp-leaf{width:14rem}
+.cp-simple{display:flex;flex-direction:column;gap:.3rem;padding:1rem 1.25rem;margin-bottom:2.5rem;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent-dark);border-radius:.4rem}
+.cp-simple>i{font-style:normal;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cp-simple>b{font-size:1.3rem;color:var(--accent-dark)}
+.cp-simple>ul{margin:.6rem 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:1.2rem}
+.cp-simple li>b{color:var(--ink)}
+.cp-simple li>div{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.6rem}
+.cp-simple .cp-leaf{width:12rem}
 .cp-simple img{width:100%}
+.cp-simple .cp-leaf span{display:none}
+.cp-simple .cp-crop{width:auto;max-width:100%}
+.cp-simple .cp-crop img{height:12rem;width:auto;max-width:100%;aspect-ratio:auto}
 .cp-row{align-self:stretch;display:grid;position:relative}
 .cp-row::before{content:"";position:absolute;top:0;left:var(--x);height:3.8rem;border-left:2px solid var(--line)}
 .cp-row>.cp-q{grid-column:1/-1;justify-self:start;margin-left:var(--x);translate:-50%;align-self:start;margin-top:1.1rem;position:relative;background:var(--paper)}
