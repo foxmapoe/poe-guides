@@ -201,7 +201,9 @@ class Page:
     def row(self, node, n, x):
         k = inner(node)
         start = min(max(0, round(2 * x - k)), 2 * n - 2 * k)
-        return (f'<div class="cp-row" style="grid-template-columns:repeat({2 * n},1fr);--x:{x / n:.4%}">'
+        q = (start + k) / 2
+        return (f'<div class="cp-row" style="grid-template-columns:repeat({2 * n},1fr);--x:{x / n:.4%};--q:{q / n:.4%};'
+                f'--l:{min(x, q) / n:.4%};--w:{abs(x - q) / n:.4%}">'
                 f'<div class="cp-q">{node[0]}</div>'
                 f'<div class="cp-rowkids" style="grid-column:{start + 1}/{start + 2 * k + 1}">{self.kids(node, [])}</div></div>')
 

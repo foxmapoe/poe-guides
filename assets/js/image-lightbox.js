@@ -2,12 +2,11 @@
   const dialog = document.getElementById("image-lightbox");
   const expandedImage = dialog?.querySelector("img");
   const closeButton = dialog?.querySelector(".image-lightbox-close");
-  const guideImages = document.querySelectorAll(".guide-content img");
 
-  if (!dialog || !expandedImage || !closeButton || guideImages.length === 0) return;
+  if (!dialog || !expandedImage || !closeButton) return;
 
   let activeTrigger = null;
-  const triggers = [];
+  let triggers = [];
   const fullSrc = (image) => image.dataset.full ? new URL(image.dataset.full, location.href).href : image.currentSrc || image.src;
   const warm = (image) => { if (image.dataset.full) new Image().src = fullSrc(image); };
 
@@ -18,24 +17,30 @@
     expandedImage.alt = image.alt;
   };
 
-  guideImages.forEach((image) => {
-    const trigger = document.createElement("button");
-    trigger.type = "button";
-    trigger.className = "guide-image-zoom";
-    trigger.setAttribute("aria-haspopup", "dialog");
-    trigger.setAttribute("aria-label", `Enlarge image: ${image.alt || "Guide image"}`);
-    image.parentNode.replaceChild(trigger, image);
-    trigger.append(image);
-    triggers.push(trigger);
+  const bind = () => {
+    triggers = [];
+    document.querySelectorAll(".guide-content img").forEach((image) => {
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "guide-image-zoom";
+      trigger.setAttribute("aria-haspopup", "dialog");
+      trigger.setAttribute("aria-label", `Enlarge image: ${image.alt || "Guide image"}`);
+      image.parentNode.replaceChild(trigger, image);
+      trigger.append(image);
+      triggers.push(trigger);
 
-    trigger.addEventListener("pointerenter", () => warm(image), { once: true });
-    trigger.addEventListener("focus", () => warm(image), { once: true });
-    trigger.addEventListener("click", () => {
-      show(trigger);
-      dialog.showModal();
-      closeButton.focus();
+      trigger.addEventListener("pointerenter", () => warm(image), { once: true });
+      trigger.addEventListener("focus", () => warm(image), { once: true });
+      trigger.addEventListener("click", () => {
+        show(trigger);
+        dialog.showModal();
+        closeButton.focus();
+      });
     });
-  });
+  };
+
+  bind();
+  document.addEventListener("guide:load", bind);
 
   dialog.addEventListener("keydown", (event) => {
     const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
