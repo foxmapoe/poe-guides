@@ -112,7 +112,7 @@ ZONES = {
         'plates': [
             (None, None, ('Waypoint above or below the entrance?', [
                 ('Above', ('Real path left?', [('Yes', ['1', '5']), ('No', '3')])),
-                ('Below', ('Straight east wall at the bottom?', [('No', ['4', '6']), ('Yes', '2')], 0)),
+                ('Below', ('Straight east wall at the bottom?', [('No', ['4', '6']), ('Yes', '2')], 0.5)),
             ])),
         ],
         'sections': [
@@ -122,6 +122,21 @@ ZONES = {
             ('Layout 4', 'The_Submerged_Passage_cave1_4_o0', '4'),
             ('Layout 5', 'The_Submerged_Passage_cave2_1_o0', '5'),
             ('Layout 6', 'The_Submerged_Passage_cave2_2_o0', '6'),
+        ],
+    },
+    'act-1/flooded-depths': {
+        'simple': 'Cut through the middle to the opposite tip of the diamond',
+        'layouts': {
+            '1': ('Layout 1', 'Flooded%201', 'West to east'),
+            '2': ('Layout 2', 'Flooded%202', 'North to south'),
+            '3': ('Layout 3', 'Flooded%203', 'East to west'),
+            '4': ('Layout 4', 'Flooded%204', 'South to north'),
+        },
+        'sections': [
+            ('Layout 1', 'The_Flooded_Depths_cavetest_o0', '1'),
+            ('Layout 2', 'The_Flooded_Depths_cavetest2_o0', '2'),
+            ('Layout 3', 'The_Flooded_Depths_cavetest3_o0', '3'),
+            ('Layout 4', 'The_Flooded_Depths_cavetest4_o0', '4'),
         ],
     },
 }
@@ -200,9 +215,10 @@ class Page:
 
     def row(self, node, n, x):
         k = inner(node)
-        start = min(max(0, round(2 * x - k)), 2 * n - 2 * k)
+        start = min(max(0, round(2 * x - k)), round(2 * n - 2 * k))
+        start -= start % 2
         q = (start + k) / 2
-        return (f'<div class="cp-row" style="grid-template-columns:repeat({2 * n},1fr);--x:{x / n:.4%};--q:{q / n:.4%};'
+        return (f'<div class="cp-row" style="grid-template-columns:repeat({round(2 * n)},1fr);--x:{x / n:.4%};--q:{q / n:.4%};'
                 f'--l:{min(x, q) / n:.4%};--w:{abs(x - q) / n:.4%}">'
                 f'<div class="cp-q">{node[0]}</div>'
                 f'<div class="cp-rowkids" style="grid-column:{start + 1}/{start + 2 * k + 1}">{self.kids(node, [])}</div></div>')
@@ -232,8 +248,8 @@ def write(slug, zone):
         exceptions = ''.join(
             f'<li><b>{text}</b><div>{"".join(page.card(k) if isinstance(k, str) else page.crop_card(*k) for k in keys)}</div></li>'
             for text, keys in zone.get('exceptions', []))
-        plates = (f'<div class="cp-simple"><i>Simple</i><b>{zone["simple"]}</b></div>'
-                  f'<div class="cp-simple"><i>Advanced</i><b>Same, except</b><ul>{exceptions}</ul></div>{plates}')
+        advanced = f'<div class="cp-simple"><i>Advanced</i><b>Same, except</b><ul>{exceptions}</ul></div>' if exceptions else ''
+        plates = f'<div class="cp-simple"><i>Simple</i><b>{zone["simple"]}</b></div>{advanced}{plates}'
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'
         + (f'{image(page.dir, zone["layouts"][k][0] + " route", zone["layouts"][k][1])}\n' if k else '')
