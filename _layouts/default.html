@@ -12,7 +12,11 @@
         }
       } catch (_) {}
     </script>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/image-lightbox.js' | relative_url }}" defer></script>
+    <script type="speculationrules">{"prerender":[{"where":{"href_matches":"{{ '/guides/*' | relative_url }}"},"eagerness":"moderate"}]}</script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -36,7 +40,7 @@
           {% include guide-navigation.html %}
         </aside>
         <div class="main-content">
-          {{ content }}
+          {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
         </div>
       </div>
     </main>
@@ -50,7 +54,5 @@
       <button class="image-lightbox-close" type="button" aria-label="Close expanded image">Close</button>
       <img alt="">
     </dialog>
-    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/image-lightbox.js' | relative_url }}"></script>
   </body>
 </html>

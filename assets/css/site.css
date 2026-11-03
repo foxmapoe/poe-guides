@@ -131,12 +131,23 @@ li + li { margin-top: 0.3rem; }
 .cp i{color:var(--accent-dark);font-style:normal;padding:0 0 .25rem;text-align:center}
 .cp-stem{flex:1;border-left:2px solid var(--line);min-height:.5rem}
 .cp-leaf{width:calc(100% - .5rem);max-width:14rem;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:.4rem;overflow:hidden}
-.cp-leaf img{background:#131317;aspect-ratio:var(--r,1);object-fit:contain;border:0;border-radius:0}
+.cp-leaf img{background:#131317;aspect-ratio:1;object-fit:contain;border:0;border-radius:0}
 .cp-leaf b{padding:.35rem .5rem;text-align:center}
 .cp-leaf span{min-height:5.6em;padding:.4rem .5rem .5rem;text-align:center;color:var(--muted);font-size:.85em}
+.cp li[style="flex:0"]>i{white-space:nowrap}
+.cp-mode{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem}
+.cp-mode>input{position:absolute;opacity:0;pointer-events:none}
+.cp-mode>label{padding:.35rem 1.1rem;border:1px solid var(--line);border-radius:999px;cursor:pointer;color:var(--muted)}
+.cp-mode>input:checked+label{color:var(--accent-dark);border-color:currentColor}
+.cp-mode>input:focus-visible+label{outline:2px solid var(--accent-dark);outline-offset:2px}
+.cp-simple,.cp-advanced{flex-basis:100%;margin-top:1.2rem}
+#mode-simple:checked~.cp-advanced,#mode-advanced:checked~.cp-simple{display:none}
+.cp-simple{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-bottom:3rem}
+.cp-simple>b{font-size:1.2rem;color:var(--accent-dark)}
+.cp-simple>div{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;width:100%}
 .cp-row{align-self:stretch;display:grid;position:relative}
 .cp-row::before{content:"";position:absolute;top:0;left:var(--x);height:3.8rem;border-left:2px solid var(--line)}
-.cp-row>.cp-q{justify-self:center;align-self:start;margin-top:1.1rem;position:relative;background:var(--paper)}
+.cp-row>.cp-q{grid-column:1/-1;justify-self:start;margin-left:var(--x);translate:-50%;align-self:start;margin-top:1.1rem;position:relative;background:var(--paper)}
 .cp-row>.cp-q,.cp-rowkids{grid-row:1}
 .cp-rowkids{display:flex;padding-top:3.8rem}
 .cp-rowkids>ul{padding-top:0}
