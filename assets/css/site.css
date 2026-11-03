@@ -1,17 +1,17 @@
 :root {
   color-scheme: dark;
-  --ink: #f3f0e9;
-  --muted: #c2bbb1;
-  --paper: #171513;
-  --panel: #24211e;
-  --line: #514a43;
+  --ink: #eef0f3;
+  --muted: #b9bdc5;
+  --paper: #131417;
+  --panel: #1c1e22;
+  --line: #3b3f47;
   --accent: #f0a181;
   --accent-dark: #ffc0a1;
-  --selected-bg: #3b302a;
-  --header-bg: #211e1b;
-  --header-text: #fff4e9;
-  --header-button-bg: #38332e;
-  --header-button-hover: #4a433b;
+  --selected-bg: #2b2f36;
+  --header-bg: #1a1c20;
+  --header-text: #f2f3f5;
+  --header-button-bg: #2c2f35;
+  --header-button-hover: #3a3e46;
   --button-bg: #ffc0a1;
   --button-hover: #ffd2bd;
   --button-text: #29211d;
