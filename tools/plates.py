@@ -108,6 +108,28 @@ ZONES = {
             ('Layout 15', 'The_Tidal_Island_island4_3_o0', '15'),
         ],
     },
+    'act-1/submerged-passage': {
+        'layouts': {
+            'Left': ('Left', None, 'Take the first left'),
+            'Right': ('Right', None, 'Go right'),
+            'Down': ('Down', None, 'Go down'),
+            'TopLeft': ('Top left', None, 'Go top left'),
+        },
+        'plates': [
+            (None, None, ('Waypoint above or below the entrance?', [
+                ('Above', ('Lets you go left?', [('Yes', 'Left'), ('No', 'Right')])),
+                ('Below', ('Lets you go down?', [('Yes', 'Down'), ('No, east wall straight', 'TopLeft')])),
+            ])),
+        ],
+        'sections': [
+            ('Layout 1', 'The_Submerged_Passage_cave1_1_o0', None),
+            ('Layout 2', 'The_Submerged_Passage_cave1_2_o0', None),
+            ('Layout 3', 'The_Submerged_Passage_cave1_3_o0', None),
+            ('Layout 4', 'The_Submerged_Passage_cave1_4_o0', None),
+            ('Layout 5', 'The_Submerged_Passage_cave2_1_o0', None),
+            ('Layout 6', 'The_Submerged_Passage_cave2_2_o0', None),
+        ],
+    },
 }
 
 
@@ -154,8 +176,8 @@ class Page:
 
     def card(self, k):
         name, img, do = self.L[k]
-        return (f'<div class="cp-leaf"><b>{name}</b>'
-                f'{self.small(img, self.crop)} alt="{name} route"><span>{do}</span></div>')
+        pic = f'{self.small(img, self.crop)} alt="{name} route">' if img else ''
+        return f'<div class="cp-leaf"><b>{name}</b>{pic}<span>{do}</span></div>'
 
     def kids(self, node, rows, at=0):
         out = ''
@@ -214,7 +236,7 @@ def write(slug, zone):
                   f'<div class="cp-advanced">{plates}</div></div>')
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'
-        f'{image(page.dir, zone["layouts"][k][0] + " route", zone["layouts"][k][1])}\n'
+        + (f'{image(page.dir, zone["layouts"][k][0] + " route", zone["layouts"][k][1])}\n' if k else '')
         for title, macro, k in zone['sections'])
     assign = f"{{% assign a = '/assets/guides/{slug}/' | relative_url %}}"
     path.write_text(f'{front}\n{assign}\n\n{plates}\n\n## Layouts\n\n{sections}', encoding='utf-8', newline='\n')
