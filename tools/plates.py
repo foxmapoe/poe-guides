@@ -110,24 +110,26 @@ ZONES = {
     },
     'act-1/submerged-passage': {
         'layouts': {
-            'Left': ('Left', None, 'Take the first left'),
-            'Right': ('Right', None, 'Go right'),
-            'Down': ('Down', None, 'Go down'),
-            'TopLeft': ('Top left', None, 'Go top left'),
+            '1': ('Layout 1', 'Submerged%201', 'Right, then left into Depths. Ledge is up-left of the boat'),
+            '2': ('Layout 2', 'Submerged%202', 'Down to the wall, then top left up to Depths. Ledge is left of the boat'),
+            '3': ('Layout 3', 'Submerged%203', 'Right, then down-right into Depths. Ledge is up from the boat'),
+            '4': ('Layout 4', 'Submerged%204', 'Straight down to Depths. Ledge is up from the boat'),
+            '5': ('Layout 5', 'Submerged%205', 'Right, then down-left into Depths. Ledge is right of the boat'),
+            '6': ('Layout 6', 'Submerged%206', 'Straight down to Depths. Ledge is right of the boat'),
         },
         'plates': [
             (None, None, ('Waypoint above or below the entrance?', [
-                ('Above', ('Lets you go left?', [('Yes', 'Left'), ('No', 'Right')])),
-                ('Below', ('Lets you go down?', [('Yes', 'Down'), ('No, east wall straight', 'TopLeft')])),
+                ('Above', ('Real path left?', [('Yes', ['1', '5']), ('No', '3')])),
+                ('Below', ('Straight east wall at the bottom?', [('No', ['4', '6']), ('Yes', '2')], 0)),
             ])),
         ],
         'sections': [
-            ('Layout 1', 'The_Submerged_Passage_cave1_1_o0', None),
-            ('Layout 2', 'The_Submerged_Passage_cave1_2_o0', None),
-            ('Layout 3', 'The_Submerged_Passage_cave1_3_o0', None),
-            ('Layout 4', 'The_Submerged_Passage_cave1_4_o0', None),
-            ('Layout 5', 'The_Submerged_Passage_cave2_1_o0', None),
-            ('Layout 6', 'The_Submerged_Passage_cave2_2_o0', None),
+            ('Layout 1', 'The_Submerged_Passage_cave1_1_o0', '1'),
+            ('Layout 2', 'The_Submerged_Passage_cave1_2_o0', '2'),
+            ('Layout 3', 'The_Submerged_Passage_cave1_3_o0', '3'),
+            ('Layout 4', 'The_Submerged_Passage_cave1_4_o0', '4'),
+            ('Layout 5', 'The_Submerged_Passage_cave2_1_o0', '5'),
+            ('Layout 6', 'The_Submerged_Passage_cave2_2_o0', '6'),
         ],
     },
 }
