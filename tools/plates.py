@@ -60,7 +60,7 @@ ZONES = {
         ],
     },
     'act-1/tidal-island': {
-        'simple': 'Go left, turn back at the ledge',
+        'simple': ('Go left, turn back at the ledge', ['2', '8', '15']),
         'layouts': {
             '1': ('Layout 1', 'The_Tidal_Island_island%201', 'Keep going left'),
             '2': ('Layout 2', 'The_Tidal_Island_island%202', 'Wide gap, keep going left'),
@@ -231,10 +231,11 @@ def write(slug, zone):
     page = Page(slug, zone)
     plates = '\n'.join(page.plate(*p) for p in zone['plates'])
     if 'simple' in zone:
-        roots = ''.join(page.root(label, head) for label, head, _ in zone['plates'])
+        rule, misses = zone['simple']
+        cards = ''.join(page.card(k) for k in misses)
         plates = (f'<div class="cp-mode"><input type="radio" name="mode" id="mode-simple" checked><label for="mode-simple">Simple</label>'
                   f'<input type="radio" name="mode" id="mode-advanced"><label for="mode-advanced">Advanced</label>'
-                  f'<div class="cp-simple"><b>{zone["simple"]}</b><div>{roots}</div></div>'
+                  f'<div class="cp-simple"><b>{rule}</b><i>Except</i><div>{cards}</div></div>'
                   f'<div class="cp-advanced">{plates}</div></div>')
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'
