@@ -60,7 +60,7 @@ ZONES = {
         ],
     },
     'act-1/tidal-island': {
-        'simple': ('Go left, turn back at the ledge', ['2', '8', '15']),
+        'simple': 'Go left, turn back at the ledge',
         'layouts': {
             '1': ('Layout 1', 'The_Tidal_Island_island%201', 'Keep going left'),
             '2': ('Layout 2', 'The_Tidal_Island_island%202', 'Wide gap, keep going left'),
@@ -78,17 +78,9 @@ ZONES = {
             '14': ('Layout 14', 'The_Tidal_Island_island%2014', 'Keep going left'),
             '15': ('Layout 15', 'The_Tidal_Island_island%2015', 'Go right'),
         },
-        'plates': [
-            ('Left entrance', 'Left', ('Ledge or rock?', [
-                ('Neither', ['1', '4']),
-                ('Rock', ('Second rock curves?', [('Left', ['3', '6', '7']), ('Right', '8')], 0)),
-                ('Ledge', ('Gap from the wall to the ledge?', [('Wide', '2'), ('Narrow', '5')])),
-            ])),
-            ('Right entrance', 'Right', ('Ledge or rock?', [
-                ('Neither', ['9', '12']),
-                ('Rock', ('First rock curved?', [('Yes', '13'), ('No', ('Second rock curves?', [('Left', '14'), ('Right', '15')]))], 0)),
-                ('Ledge', ['10', '11']),
-            ])),
+        'exceptions': [
+            ('Wide gap from the wall to the ledge: keep going left', ['2']),
+            ('Straight rock wall, no corner: go right', [('wall-corner', 'Corner: keep left'), ('wall-straight', 'Straight: go right')]),
         ],
         'sections': [
             ('Layout 1', 'The_Tidal_Island_island1_1_o0', '1'),
@@ -181,6 +173,10 @@ class Page:
         pic = f'{self.small(img, self.crop)} alt="{name} route">' if img else ''
         return f'<div class="cp-leaf"><b>{name}</b>{pic}<span>{do}</span></div>'
 
+    def crop_card(self, img, caption):
+        w, h = size(self.dir / f'{img}.webp')
+        return f'<div class="cp-leaf cp-crop"><b>{caption}</b><img src="{A}{img}.webp" width="{w}" height="{h}" alt="{caption}"></div>'
+
     def kids(self, node, rows, at=0):
         out = ''
         for ans, c in node[1]:
@@ -229,14 +225,13 @@ def write(slug, zone):
     path = ROOT / '_guides' / f'{slug}.md'
     front = re.match(r'---\n.*?\n---\n', path.read_text(encoding='utf-8'), re.S).group(0)
     page = Page(slug, zone)
-    plates = '\n'.join(page.plate(*p) for p in zone['plates'])
+    plates = '\n'.join(page.plate(*p) for p in zone.get('plates', []))
     if 'simple' in zone:
-        rule, misses = zone['simple']
-        cards = ''.join(page.card(k) for k in misses)
-        plates = (f'<div class="cp-mode"><input type="radio" name="mode" id="mode-simple" checked><label for="mode-simple">Simple</label>'
-                  f'<input type="radio" name="mode" id="mode-advanced"><label for="mode-advanced">Advanced</label>'
-                  f'<div class="cp-simple"><b>{rule}</b><i>Except</i><div>{cards}</div></div>'
-                  f'<div class="cp-advanced">{plates}</div></div>')
+        exceptions = ''.join(
+            f'<li><b>{text}</b><div>{"".join(page.card(k) if isinstance(k, str) else page.crop_card(*k) for k in keys)}</div></li>'
+            for text, keys in zone.get('exceptions', []))
+        plates = (f'<div class="cp-simple"><i>Simple</i><b>{zone["simple"]}</b></div>'
+                  f'<div class="cp-simple"><i>Advanced</i><b>Same, except</b><ul>{exceptions}</ul></div>{plates}')
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'
         + (f'{image(page.dir, zone["layouts"][k][0] + " route", zone["layouts"][k][1])}\n' if k else '')
