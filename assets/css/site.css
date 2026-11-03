@@ -12,9 +12,6 @@
   --header-text: #f2f3f5;
   --header-button-bg: #2c2f35;
   --header-button-hover: #3a3e46;
-  --button-bg: #ffc0a1;
-  --button-hover: #ffd2bd;
-  --button-text: #29211d;
   --focus: #f3c766;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.65;
@@ -34,9 +31,6 @@
   --header-text: #f4e9df;
   --header-button-bg: #38332e;
   --header-button-hover: #4a433b;
-  --button-bg: #67271d;
-  --button-hover: #8e3829;
-  --button-text: #fff;
   --focus: #754a00;
 }
 
@@ -88,8 +82,6 @@ li + li { margin-top: 0.3rem; }
 .eyebrow, .updated { color: var(--muted); font-size: 0.95rem; }
 .eyebrow { margin: 0 0 0.4rem; }
 .guide-header { margin-bottom: 2rem; }
-.download-button { display: inline-block; margin-top: 0.75rem; padding: 0.55rem 0.8rem; border-radius: 0.3rem; background: var(--button-bg); color: var(--button-text); font-weight: 650; text-decoration: none; }
-.download-button:hover { background: var(--button-hover); color: var(--button-text); }
 .guide-content { max-width: 48rem; }
 .guide-content img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--line); border-radius: 0.35rem; }
 .guide-image-zoom { display: block; max-width: 100%; margin: 1.5rem auto; padding: 0; border: 0; background: transparent; cursor: zoom-in; }

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Campaign guides
+title:
 ---
 
 Find community-written route and layout guides for the Path of Exile campaign.
