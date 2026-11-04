@@ -7,7 +7,7 @@ game_version: ""
 
 {% assign a = '/assets/guides/act-1/climb/' | relative_url %}
 
-<div class="cp-simple"><i>Simple</i><b>Follow the wall the entrance points you to</b></div><div class="cp-simple"><i>Advanced</i><div class="cp"><div class="cp-q">Entrance points which way?</div><ul><li style="flex:1"><i>Up-right</i><div class="cp-stem"></div><div class="cp-leaf"><b>Right wall</b><img data-full="{{ a }}climb.webp" src="{{ a }}cards/climb.webp" width="640" height="360" decoding="async" alt="Right wall route"><span></span></div></li><li style="flex:1"><i>Up-left</i><div class="cp-stem"></div><div class="cp-leaf"><b>Left wall</b><img data-full="{{ a }}climb%202.webp" src="{{ a }}cards/climb%202.webp" width="640" height="360" decoding="async" alt="Left wall route"><span></span></div></li></ul></div></div>
+<div class="cp-simple"><i>Simple</i><b>Follow the wall the entrance points you to</b></div>
 
 ## Layouts
 

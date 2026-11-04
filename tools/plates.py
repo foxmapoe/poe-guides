@@ -148,8 +148,6 @@ ZONES = {
     'act-1/climb': {
         'simple': 'Follow the wall the entrance points you to',
         'layouts': {
-            'R': ('Right wall', 'climb', ''),
-            'L': ('Left wall', 'climb%202', ''),
             '1': ('Layout 1', 'climb_1', ''),
             '2': ('Layout 2', 'climb_2', ''),
             '3': ('Layout 3', 'climb_3', ''),
@@ -157,9 +155,6 @@ ZONES = {
             '5': ('Layout 5', 'climb_5', ''),
             '6': ('Layout 6', 'climb_6', ''),
         },
-        'plates': [
-            (None, None, ('Entrance points which way?', [('Up-right', 'R'), ('Up-left', 'L')])),
-        ],
         'sections': [
             ('Layout 1', 'The_Climb_macro_climb1_1_o0', '1'),
             ('Layout 2', 'The_Climb_macro_climb1_2_o0', '2'),
