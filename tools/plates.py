@@ -171,8 +171,8 @@ ZONES = {
             '2': ('Layout 2', 'route_2', 'Go up. Exit straight up'),
             '2R': ('Layout 2', 'route_2', 'Through the room right of room 2, then up. Exit straight up'),
             '3': ('Layout 3', 'route_3', 'Keep going up-left. Exit up-left'),
-            '4': ('Layout 4', 'route_4', 'Down-left ×4, up-left 3–4, then down-left. Exit straight left'),
-            '4S': ('Layout 4 South', '', 'Down-left, then left. Exit down-left'),
+            '4': ('Layout 4', 'route_4', 'Up-left ×2, then down-left ×4, up-left 3–4, then down-left. Exit straight left'),
+            '4S': ('Layout 4 South', 'route_4S', 'Down-left, then left. Exit down-left'),
             '5': ('Layout 5', 'route_5', 'Up-left to room 4, left ×4, up-left, left. Exit straight left'),
         },
         'plates': [
