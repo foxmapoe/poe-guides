@@ -121,11 +121,11 @@ li + li { margin-top: 0.3rem; }
 .cp li:first-child::before,.cp li:last-child::after{border-top:0}
 .cp li:only-child::before{display:none}
 .cp i{color:var(--accent-dark);font-style:normal;padding:0 0 .25rem;text-align:center}
-.cp-stem{flex:1;border-left:2px solid var(--line);min-height:.5rem}
-.cp-leaf{width:calc(100% - .5rem);max-width:14rem;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:.4rem;overflow:hidden}
+.cp-stem{border-left:2px solid var(--line);min-height:.5rem}
+.cp-leaf{width:calc(100% - .5rem);max-width:14rem;flex:1;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:.4rem;overflow:hidden}
 .cp-leaf img{background:#131317;aspect-ratio:1;object-fit:contain;border:0;border-radius:0}
 .cp-leaf b{padding:.35rem .5rem;text-align:center}
-.cp-leaf span{min-height:5.6em;padding:.4rem .5rem .5rem;text-align:center;color:var(--muted);font-size:.85em}
+.cp-leaf span{flex:1;padding:.4rem .5rem .5rem;text-align:center;color:var(--muted);font-size:.85em}
 .cp li[style="flex:0"]>i{white-space:nowrap}
 .cp-simple{display:flex;flex-direction:column;gap:.3rem;padding:1rem 1.25rem;margin-bottom:2.5rem;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent-dark);border-radius:.4rem}
 .cp-simple>i{font-style:normal;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
