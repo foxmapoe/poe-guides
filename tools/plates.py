@@ -228,7 +228,7 @@ class Page:
                 body = self.kids(('', [('', k) for k in c]), rows, at)
             elif folded(c):
                 rows.append((c, at + w / 2))
-                body = '<div class="cp-stem"></div>'
+                body = '<div class="cp-stem cp-fold"></div>'
             else:
                 body = self.sub(c, rows, at)
             label = f'<i>{ans}</i>' if ans else ''
