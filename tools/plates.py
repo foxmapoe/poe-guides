@@ -165,6 +165,39 @@ ZONES = {
             ('Layout 6', 'The_Climb_macro_climb2_3_o0', '6'),
         ],
     },
+    'act-4/belly-of-the-beast-2': {
+        'layouts': {
+            '1': ('Layout 1', 'route_1', 'Up-left to room 4, then zigzag down-left and up-left. Exit left, slightly up'),
+            '2': ('Layout 2', 'route_2', 'Go up. Exit straight up'),
+            '2R': ('Layout 2', 'route_2', 'Through the room right of room 2, then up. Exit straight up'),
+            '3': ('Layout 3', 'route_3', 'Keep going up-left. Exit up-left'),
+            '4': ('Layout 4', 'route_4', 'Down-left ×4, up-left 3–4, then down-left. Exit straight left'),
+            '4S': ('Layout 4 South', '', 'Down-left, then left. Exit down-left'),
+            '5': ('Layout 5', 'route_5', 'Up-left to room 4, left ×4, up-left, left. Exit straight left'),
+        },
+        'plates': [
+            (None, None, ('Path up-left from the door?', [
+                ('No', '4S'),
+                ('Yes', ('Piece off room 1 top-right?', [
+                    ('Yes', ('Down-left room by the door leads on?', [('Yes', '1'), ('No', '3')])),
+                    ('No', ('Room 1 goes on up-left?', [
+                        ('No', '2'),
+                        ('Yes', ('Room 2 opens down-left?', [
+                            ('No', '5'),
+                            ('Yes', ('Room right of room 2 goes on up-right?', [('Yes', '2R'), ('No', '4')])),
+                        ])),
+                    ])),
+                ])),
+            ])),
+        ],
+        'sections': [
+            ('Layout 1', 'The_Belly_of_the_Beast_Level_2_belly1_o0', None),
+            ('Layout 2', 'The_Belly_of_the_Beast_Level_2_belly2_o0', None),
+            ('Layout 3', 'The_Belly_of_the_Beast_Level_2_belly3_o0', None),
+            ('Layout 4', 'The_Belly_of_the_Beast_Level_2_belly4_o0', None),
+            ('Layout 5', 'The_Belly_of_the_Beast_Level_2_belly5_o0', None),
+        ],
+    },
 }
 
 
