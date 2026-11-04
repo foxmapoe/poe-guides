@@ -147,6 +147,7 @@ ZONES = {
     },
     'act-1/climb': {
         'simple': 'Follow the wall the entrance points you to',
+        'images': ['climb', 'climb%202'],
         'layouts': {
             '1': ('Layout 1', 'climb_1', ''),
             '2': ('Layout 2', 'climb_2', ''),
@@ -277,6 +278,9 @@ def write(slug, zone):
         if plates:
             plates = f'<div class="cp-simple"><i>Advanced</i>{plates}</div>'
         plates = f'<div class="cp-simple"><i>Simple</i><b>{zone["simple"]}</b></div>{advanced}{plates}'
+    images = '\n'.join(image(page.dir, 'Entrance direction', img) for img in zone.get('images', []))
+    if images:
+        plates = f'{plates}\n\n{images}'
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'
         + (f'{image(page.dir, zone["layouts"][k][0] + " route", zone["layouts"][k][1])}\n' if k else '')
