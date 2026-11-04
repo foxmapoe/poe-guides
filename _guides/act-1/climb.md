@@ -9,6 +9,9 @@ game_version: ""
 
 <div class="cp-simple"><i>Simple</i><b>Follow the wall the entrance points you to</b></div>
 
+![Entrance direction]({{ a }}climb.webp){: width="2559" height="1439"}
+![Entrance direction]({{ a }}climb%202.webp){: width="2559" height="1439"}
+
 ## Layouts
 
 ### Layout 1
