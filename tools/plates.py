@@ -112,7 +112,7 @@ ZONES = {
         'plates': [
             (None, None, ('Waypoint above or below the entrance?', [
                 ('Above', ('Path opens fully left?', [('Yes', '1'), ('No', ('Bridge visible on the way?', [('Yes', '3'), ('No', '5')]))])),
-                ('Below', ('Path keeps going down?', [('Yes', ['4', '6']), ('No', '2')], 0.5)),
+                ('Below', ('Path keeps going down?', [('Yes', ['4', '6']), ('No', '2')], 1)),
             ])),
         ],
         'sections': [
@@ -228,7 +228,7 @@ class Page:
                 body = self.kids(('', [('', k) for k in c]), rows, at)
             elif folded(c):
                 rows.append((c, at + w / 2))
-                body = '<div class="cp-stem"></div>'
+                body = '<div class="cp-stem cp-fold"></div>'
             else:
                 body = self.sub(c, rows, at)
             label = f'<i>{ans}</i>' if ans else ''
