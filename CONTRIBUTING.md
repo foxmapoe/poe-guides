@@ -26,13 +26,22 @@ Guides are Markdown files, so you can propose edits directly in GitHub without i
 
 Store images in a folder matching each guide's act and area slug. For example, images for `_guides/act-1/coast.md` go in `assets/guides/act-1/coast/`. Use clear, consistent filenames such as `route-map.webp` and `landmarks.webp`.
 
+Use WebP for guide images and keep each file at most 1 MiB. To compress staged guide images automatically before committing, install the image tool dependency and enable the repository hook once:
+
+```sh
+python3 -m pip install -r tools/requirements.txt
+git config core.hooksPath .githooks
+```
+
+The hook re-encodes staged WebP images larger than 1 MiB at quality 90 and stages the smaller result. If you upload images through GitHub or skip the hook, the pull request image check enforces the format and size limit. To compress selected files without staging them, pass their paths to `python3 tools/compress_images.py`.
+
 Open the matching folder in GitHub and choose **Add file → Upload files**. Link each image from the relevant section of the guide using `relative_url`, and write alt text that describes the route information shown:
 
 ```markdown
 ![Coast route from the Twilight Strand entrance to the Mud Flats exit, with the waypoint marked.]({{ '/assets/guides/act-1/coast/route-map.webp' | relative_url }})
 ```
 
-Keep images focused on the information needed to follow the route, readable on mobile, and reasonably compressed before uploading.
+Keep images focused on the information needed to follow the route and readable on mobile.
 
 You can also open an issue and attach an image there if you need help adding it to the repository.
 
