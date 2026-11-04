@@ -112,7 +112,7 @@ ZONES = {
         'plates': [
             (None, None, ('Waypoint above or below the entrance?', [
                 ('Above', ('Path opens fully left?', [('Yes', '1'), ('No', ('Bridge visible on the way?', [('Yes', '3'), ('No', '5')]))])),
-                ('Below', ('Path keeps going down?', [('Yes', ['4', '6']), ('No', '2')], 0.5)),
+                ('Below', ('Path keeps going down?', [('Yes', ['4', '6']), ('No', '2')], 1)),
             ])),
         ],
         'sections': [
