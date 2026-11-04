@@ -111,8 +111,8 @@ ZONES = {
         },
         'plates': [
             (None, None, ('Waypoint above or below the entrance?', [
-                ('Above', ('Real path left?', [('Yes', ['1', '5']), ('No', '3')])),
-                ('Below', ('Straight east wall at the bottom?', [('No', ['4', '6']), ('Yes', '2')], 0.5)),
+                ('Above', ('Path opens fully left?', [('Yes', '1'), ('No', ('Bridge visible on the way?', [('Yes', '3'), ('No', '5')]))])),
+                ('Below', ('Path keeps going down?', [('Yes', ['4', '6']), ('No', '2')], 0.5)),
             ])),
         ],
         'sections': [
@@ -127,16 +127,46 @@ ZONES = {
     'act-1/flooded-depths': {
         'simple': 'Cut through the middle to the opposite tip of the diamond',
         'layouts': {
-            '1': ('Layout 1', 'Flooded%201', 'West to east'),
-            '2': ('Layout 2', 'Flooded%202', 'North to south'),
-            '3': ('Layout 3', 'Flooded%203', 'East to west'),
-            '4': ('Layout 4', 'Flooded%204', 'South to north'),
+            '3D': ('East tip', 'route_3_dweller', 'Get to the middle, get a bit down, then west into the big rooms. Going west too early often runs into a big dead end'),
+            '1': ('West tip', 'Flooded%201', ''),
+            '2': ('North tip', 'Flooded%202', ''),
+            '3': ('East tip', 'Flooded%203', ''),
+            '4': ('South tip', 'Flooded%204', ''),
         },
+        'plates': [
+            (None, None, ('Which way does the path open?', [
+                ('East', '1'), ('South', '2'), ('West', '3D'), ('North', '4'),
+            ])),
+        ],
         'sections': [
             ('Layout 1', 'The_Flooded_Depths_cavetest_o0', '1'),
             ('Layout 2', 'The_Flooded_Depths_cavetest2_o0', '2'),
             ('Layout 3', 'The_Flooded_Depths_cavetest3_o0', '3'),
             ('Layout 4', 'The_Flooded_Depths_cavetest4_o0', '4'),
+        ],
+    },
+    'act-1/climb': {
+        'simple': 'Follow the wall the entrance points you to',
+        'layouts': {
+            'R': ('Right wall', 'climb', ''),
+            'L': ('Left wall', 'climb%202', ''),
+            '1': ('Layout 1', 'climb_1', ''),
+            '2': ('Layout 2', 'climb_2', ''),
+            '3': ('Layout 3', 'climb_3', ''),
+            '4': ('Layout 4', 'climb_4', ''),
+            '5': ('Layout 5', 'climb_5', ''),
+            '6': ('Layout 6', 'climb_6', ''),
+        },
+        'plates': [
+            (None, None, ('Entrance points which way?', [('Up-right', 'R'), ('Up-left', 'L')])),
+        ],
+        'sections': [
+            ('Layout 1', 'The_Climb_macro_climb1_1_o0', '1'),
+            ('Layout 2', 'The_Climb_macro_climb1_2_o0', '2'),
+            ('Layout 3', 'The_Climb_macro_climb1_3_o0', '3'),
+            ('Layout 4', 'The_Climb_macro_climb2_1_o0', '4'),
+            ('Layout 5', 'The_Climb_macro_climb2_2_o0', '5'),
+            ('Layout 6', 'The_Climb_macro_climb2_3_o0', '6'),
         ],
     },
 }
@@ -249,6 +279,8 @@ def write(slug, zone):
             f'<li><b>{text}</b><div>{"".join(page.card(k) if isinstance(k, str) else page.crop_card(*k) for k in keys)}</div></li>'
             for text, keys in zone.get('exceptions', []))
         advanced = f'<div class="cp-simple"><i>Advanced</i><b>Same, except</b><ul>{exceptions}</ul></div>' if exceptions else ''
+        if plates:
+            plates = f'<div class="cp-simple"><i>Advanced</i>{plates}</div>'
         plates = f'<div class="cp-simple"><i>Simple</i><b>{zone["simple"]}</b></div>{advanced}{plates}'
     sections = '\n'.join(
         f'### {title}\n\n{image(page.dir, f"{title} layout", macro)}\n'

@@ -5,28 +5,38 @@ order: 7
 game_version: ""
 ---
 
-Climb has two orientations entrance pointing left and entrance pointing right.
-The Read its simple you follow the wall that the entrance points you to.
-Example you enter from the right you follow right wall.
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb 2.webp' | relative_url }})
+{% assign a = '/assets/guides/act-1/climb/' | relative_url %}
+
+<div class="cp-simple"><i>Simple</i><b>Follow the wall the entrance points you to</b></div><div class="cp-simple"><i>Advanced</i><div class="cp"><div class="cp-q">Entrance points which way?</div><ul><li style="flex:1"><i>Up-right</i><div class="cp-stem"></div><div class="cp-leaf"><b>Right wall</b><img data-full="{{ a }}climb.webp" src="{{ a }}cards/climb.webp" width="640" height="360" decoding="async" alt="Right wall route"><span></span></div></li><li style="flex:1"><i>Up-left</i><div class="cp-stem"></div><div class="cp-leaf"><b>Left wall</b><img data-full="{{ a }}climb%202.webp" src="{{ a }}cards/climb%202.webp" width="640" height="360" decoding="async" alt="Left wall route"><span></span></div></li></ul></div></div>
 
 ## Layouts
 
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb1_1_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_1.webp' | relative_url }})
+### Layout 1
 
-![Act 1 Climb layout map 2]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb1_2_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_2.webp' | relative_url }})
+![Layout 1 layout]({{ a }}The_Climb_macro_climb1_1_o0.webp){: width="2590" height="1648"}
+![Layout 1 route]({{ a }}climb_1.webp){: width="2590" height="1648"}
 
-![Act 1 Climb layout map 3]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb1_3_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_3.webp' | relative_url }})
+### Layout 2
 
-![Act 1 Climb layout map 4]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb2_1_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_4.webp' | relative_url }})
+![Layout 2 layout]({{ a }}The_Climb_macro_climb1_2_o0.webp){: width="2586" height="1160"}
+![Layout 2 route]({{ a }}climb_2.webp){: width="2586" height="1160"}
 
-![Act 1 Climb layout map 5]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb2_2_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_5.webp' | relative_url }})
+### Layout 3
 
-![Act 1 Climb layout map 6]({{ '/assets/guides/act-1/climb/The_Climb_macro_climb2_3_o0.webp' | relative_url }})
-![Act 1 Climb layout map 1]({{ '/assets/guides/act-1/climb/climb_6.webp' | relative_url }})
+![Layout 3 layout]({{ a }}The_Climb_macro_climb1_3_o0.webp){: width="2128" height="1672"}
+![Layout 3 route]({{ a }}climb_3.webp){: width="2128" height="1672"}
+
+### Layout 4
+
+![Layout 4 layout]({{ a }}The_Climb_macro_climb2_1_o0.webp){: width="1672" height="2289"}
+![Layout 4 route]({{ a }}climb_4.webp){: width="1672" height="2289"}
+
+### Layout 5
+
+![Layout 5 layout]({{ a }}The_Climb_macro_climb2_2_o0.webp){: width="1809" height="2584"}
+![Layout 5 route]({{ a }}climb_5.webp){: width="1809" height="2584"}
+
+### Layout 6
+
+![Layout 6 layout]({{ a }}The_Climb_macro_climb2_3_o0.webp){: width="2637" height="1302"}
+![Layout 6 route]({{ a }}climb_6.webp){: width="2637" height="1302"}
