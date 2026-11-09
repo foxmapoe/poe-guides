@@ -165,6 +165,31 @@ ZONES = {
             ('Layout 6', 'The_Climb_macro_climb2_3_o0', '6'),
         ],
     },
+    'act-2/vaal-ruins': {
+        'layouts': {
+            'Bottom': ('Bottom', 'route_bottom', 'S, then W at the corruption'),
+            'BottomLong': ('Long Bottom', 'route_bottom_long', 'S until blocked, then U-turn at the corruption'),
+            'Square': ('Square', 'route_square', 'W at the corruption'),
+            'Loop': ('Loop', 'route_loop', 'Round the loop to the corruption'),
+            'LShape': ('L-Shaped', 'route_lshape', 'The corruption is always at the far end'),
+            'Left': ('Left', 'route_left', 'L at the corruption'),
+            'Top': ('Top Default', 'route_top', 'S at the corruption'),
+            'TopLong': ('Top Default Long', 'route_top_long', 'Immediate U after the first left. S at the corruption'),
+            'Reverse': ('Top Reverse', 'route_reverse', 'Path goes U, 1 module L of the entrance. Corruption N of the path at the U-turn'),
+            'ReverseLong': ('Top Reverse Long', 'route_reverse_long', 'Path goes U, 1 module L of the entrance. Corruption N of the path, long after the U-turn'),
+        },
+        'plates': [
+            (None, None, ('Can you go S?', [
+                ('Yes', ('Blocked later?', [('No', 'Bottom'), ('Yes', 'BottomLong')])),
+                ('No, forced right', ('Modules until forced up?', [('1', 'Square'), ('2', 'Loop'), ('3', 'LShape')])),
+                ('No, forced left', ('Left is…', [
+                    ('Long', 'Left'),
+                    ('Short', ('Along S wall, can go S?', [('Yes', ['Top', 'TopLong']), ('No', ['Reverse', 'ReverseLong'])], 2)),
+                ])),
+            ])),
+        ],
+        'sections': [(f'Layout {i}', f'The_Vaal_Ruins_dungeon{i}_o0', None) for i in range(1, 11)],
+    },
     'act-4/belly-of-the-beast-2': {
         'layouts': {
             '1': ('Layout 1', 'route_1', 'Up-left to room 4, then zigzag down-left and up-left. Exit left, slightly up'),
